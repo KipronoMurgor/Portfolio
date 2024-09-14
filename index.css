@@ -1,0 +1,241 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #6a82fb, #fc5c7d);
+    color: white;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #ffd700;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #fcb69f;
+}
+
+/* Section Styles */
+section {
+    padding: 60px 0;
+}
+
+.about {
+    background-color: #fff;
+}
+
+.about h2,
+.skills h2,
+.projects h2,
+.contact h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.about p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Skills Section */
+.skills {
+    background-color: #e9e9ff;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.skill {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skill h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* Projects Section */
+.projects {
+    background-color: #fff5f5;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #e0ffe0;
+    text-align: center;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+/* Social Media Links */
+.social-links {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.social-icon {
+    margin: 0 10px;
+    color: white;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.hero {
+    text-align: center;
+    padding: 50px 0;
+    background-image: url('images/hero-background.jpg'); /* Path to your image */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Avoids repeating the image */
+    color: white; /* Ensures text is visible over the image */
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent overlay for better text visibility */
+    z-index: 1;
+}
+
+.hero h1, .hero p, .hero .btn {
+    position: relative;
+    z-index: 2; /* Ensures the text is above the overlay */
+}
+@media (max-width: 768px) {
+    .hero {
+        background-position: top; /* Adjusts the image positioning for smaller screens */
+    }
+}
+
+.social-icon i {
+    font-size: 1.5rem;
+}
+
+.social-icon:hover {
+    background-color: #ffd700; /* Change background on hover */
+    color: #333;
+}
+
+/* Specific Colors for Each Platform */
+.social-icon .fa-facebook-f { background-color: #3b5998; color: white; }
+.social-icon .fa-tiktok { background-color: #010101; color: white; }
+.social-icon .fa-telegram-plane { background-color: #0088cc; color: white; }
+.social-icon .fa-whatsapp { background-color: #25d366; color: white; }
+
+.social-icon:hover .fa-facebook-f { background-color: #3b5998; }
+.social-icon:hover .fa-tiktok { background-color: #010101; }
+.social-icon:hover .fa-telegram-plane { background-color: #0088cc; }
+.social-icon:hover .fa-whatsapp { background-color: #25d366; }
